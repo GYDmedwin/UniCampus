@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.tpboys.unicampus.view.NoScrollViewPager
+        android:id="@+id/vp_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <RadioGroup
+        android:id="@+id/rg_tab_group"
+        android:background="#33cccc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <RadioButton
+            android:id="@+id/tab_home"
+            android:text="首页"
+            android:gravity="center"
+            android:drawableTop="@drawable/selector_tab_home"
+            style="@style/Bottom_tab_style"/>
+        <RadioButton
+            android:id="@+id/tab_broadcast"
+            android:text="广播"
+            android:gravity="center"
+            android:drawableTop="@drawable/selector_tab_broadcast"
+            style="@style/Bottom_tab_style"/>
+        <RadioButton
+            android:id="@+id/tab_community"
+            android:text="社区"
+            android:gravity="center"
+            android:drawableTop="@drawable/selector_tab_community"
+            style="@style/Bottom_tab_style"/>
+        <RadioButton
+            android:id="@+id/tab_message"
+            android:text="消息"
+            android:gravity="center"
+            android:drawableTop="@drawable/selector_tab_message"
+            style="@style/Bottom_tab_style"/>
+    </RadioGroup>
+
+</LinearLayout>

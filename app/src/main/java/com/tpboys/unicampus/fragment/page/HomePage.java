@@ -1,8 +1,8 @@
 package com.tpboys.unicampus.fragment.page;
 
 import android.app.Activity;
-import android.view.Gravity;
-import android.widget.TextView;
+
+import com.tpboys.unicampus.fragment.page.detail.HomeDetail;
 
 public class HomePage extends BasePage {
     public HomePage(Activity activity) {
@@ -14,9 +14,7 @@ public class HomePage extends BasePage {
         tv_title.setText("首页");
 
         //TODO:临时测试detail，请完善后续
-        TextView screen = new TextView(mActivity);
-        screen.setText("首页——具体内容");
-        screen.setGravity(Gravity.CENTER);
-        flContainer.addView(screen);
+        HomeDetail detail = new HomeDetail(mActivity);
+        flContainer.addView(detail.mRootView);
     }
 }

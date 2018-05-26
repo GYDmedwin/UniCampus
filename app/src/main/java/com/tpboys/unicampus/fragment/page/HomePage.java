@@ -15,6 +15,7 @@ public class HomePage extends BasePage {
 
         //TODO:临时测试detail，请完善后续
         HomeDetail detail = new HomeDetail(mActivity);
+        flContainer.removeAllViews();
         flContainer.addView(detail.mRootView);
     }
 }

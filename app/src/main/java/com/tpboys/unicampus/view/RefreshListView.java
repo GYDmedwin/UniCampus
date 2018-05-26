@@ -34,6 +34,7 @@ public class RefreshListView extends ListView {
     private onRefreshListener mListener;
     private int mMeasuredHeight;
 
+
     public RefreshListView(Context context) {
         super(context);
         initHeadView();
@@ -86,7 +87,7 @@ public class RefreshListView extends ListView {
                 break;
             case MotionEvent.ACTION_MOVE:
                 if (mCurrentState==STATE_REFRESHING)
-                    return true;
+                    break;
                 if(startY==-1)
                     startY = (int) e.getY();
                 int moveY = (int) e.getY();
@@ -100,6 +101,7 @@ public class RefreshListView extends ListView {
                         mCurrentState = STATE_PULL_TO_REFRESH;
                         refreshState();
                     }
+                    return true;
                 }
                 break;
             case MotionEvent.ACTION_UP:
@@ -115,7 +117,7 @@ public class RefreshListView extends ListView {
                 }
                 break;
         }
-        return true;
+        return super.onTouchEvent(e);
     }
 
     private void refreshState(){
